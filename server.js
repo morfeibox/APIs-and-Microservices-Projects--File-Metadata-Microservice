@@ -21,10 +21,8 @@ app.get('/hello', function(req, res){
 });
 
 
-app.post('/upload', upload.single('file'), (req, res, next)=>{
-  // res.json(req.file); - all file information
-
-  res.json({"size": req.file.size});
+app.post('/upload', upload.single('upfile'), (req, res, next)=>{
+  res.json({ "original_name": req.file.originalname, "size": req.file.size});
 });
 
 app.listen(process.env.PORT || 3000, function () {

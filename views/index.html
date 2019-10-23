@@ -4,20 +4,21 @@
 
    <head>
       <title>File Metadata</title>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/form.min.css" />
+          <!-- A bug apper in js when try using input name diffrent from "file". However because for the testing from Freecodecamp requires nam="upfile" we wiil exclude the styling -->
+      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/form.min.css" />
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/button.min.css" />
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/grid.min.css" />
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/input.min.css" />
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/segment.min.css" />
-            <link href="/public/style.css" rel="stylesheet" type="text/css">
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/form.min.js"></script>
+            <link href="/public/style.css" rel="stylesheet" type="text/css"> -->
+            <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/form.min.js"></script> -->
    </head>
 
    <body>
       <div class="ui middle aligned center aligned grid container">
        <form action="/upload" method="post" enctype="multipart/form-data" >
         <div class="ui fluid segment">
-            <input type="file" name="file" class="inputfile" id="file" />
+            <input type="file" name="upfile" class="inputfile" id="file" />
             <label for="file" class="ui teal floated button">
               <i class="ui upload icon"></i> 
               Upload image
