@@ -9,21 +9,23 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/grid.min.css" />
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/input.min.css" />
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/segment.min.css" />
-            <scr
+            <link href="/public/style.css" rel="stylesheet" type="text/css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/form.min.js"></script>
    </head>
 
    <body>
-
-    <div class="ui middle aligned center aligned grid container">
-      <div class="ui fluid segment">
-          <input type="file" (change)="fileEvent($event)" class="inputfile" id="embedpollfileinput" />
-          <label for="embedpollfileinput" class="ui teal right floated button">
-            <i class="ui upload icon"></i> 
-            Upload image
-          </label>
-        </div>
-      </div>
-
+      <div class="ui middle aligned center aligned grid container">
+       <form action="/upload" method="post" enctype="multipart/form-data" >
+        <div class="ui fluid segment">
+            <input type="file" name="file" class="inputfile" id="file" />
+            <label for="file" class="ui teal floated button">
+              <i class="ui upload icon"></i> 
+              Upload image
+            </label>
+            <Button type="submt" class="ui teal floated button">Submit</Button>
+          </div>
+      </form>
+    </div>
   </body>
 
 </html>
